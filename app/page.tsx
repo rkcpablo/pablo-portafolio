@@ -11,13 +11,13 @@ export default function Home() {
         </h1>
 
         <p className="text-xl text-gray-300 max-w-2xl mb-10">
-          Business and data professional focused on analytics, SQL, Python,
-          machine learning, ETL, and payments.
+          Data professional focused on analytics, SQL, Python,
+          machine learning and ETLs.
         </p>
 
         <div className="flex gap-4 mb-16">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/pablo-khouri-189427222/"
             target="_blank"
             className="px-6 py-3 bg-white text-black rounded-xl font-medium"
           >
