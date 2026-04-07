@@ -41,11 +41,11 @@ export default function Home() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
-            Data projects with real business and analytical depth.
+            Data projects with business impact and analytical depth.
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
-            Welcome to my portfolio! Take a look at my experiences and if you have any questions reach out
+            Welcome to my portfolio! Take a look at my experiences and if you have any questions please reach out
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -72,33 +72,25 @@ export default function Home() {
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
             <h2 className="text-xl font-semibold mb-5">Tools</h2>
 
-            <div className="grid md:grid-cols-3 gap-6 text-slate-300">
-              <div>
-                <p className="text-white font-medium mb-2">Core</p>
-                <ul className="space-y-1">
-                  <li>• Python</li>
-                  <li>• SQL</li>
-                  <li>• Excel</li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="text-white font-medium mb-2">Analytics</p>
-                <ul className="space-y-1">
-                  <li>• ETL Pipelines</li>
-                  <li>• Statistical Analysis</li>
-                  <li>• Predictive Modeling</li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="text-white font-medium mb-2">Visualization</p>
-                <ul className="space-y-1">
-                  <li>• Power BI</li>
-                  <li>• Tableau</li>
-                  <li>• Qlik Sense</li>
-                </ul>
-              </div>
+            <div className="flex flex-wrap gap-3 justify-center text-sm text-slate-300">
+              {[
+                "Python",
+                "SQL",
+                "Excel",
+                "ETL Pipelines",
+                "Statistical Analysis",
+                "Predictive Modeling",
+                "Power BI",
+                "Tableau",
+                "Qlik Sense",
+              ].map((tool, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 hover:border-cyan-400/40 transition"
+                >
+                  {tool}
+                </span>
+              ))}
             </div>
           </div>
 
