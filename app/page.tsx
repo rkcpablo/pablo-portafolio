@@ -45,8 +45,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
-            Everything from analytics (KPIs), SQL, machine
-            learning, ETL pipelines, and predictive modeling.
+            Welcome to my portfolio! Take a look at my experiences and if you have any questions reach out
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -65,17 +64,41 @@ export default function Home() {
             <h2 className="text-xl font-semibold mb-3">About Me</h2>
             <p className="text-slate-300">
               Always a curious and analytical professional, eager to learn, solve problems,
-              and contribute to the development of impactful ideas. I pay close attention 
+              and contribute to the development of impactful ideas. I pay close attention
               to detail while maintaining focus on the bigger strategic picture.
             </p>
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-            <h2 className="text-xl font-semibold mb-3">Tools</h2>
-            <p className="text-slate-300">
-              Python, SQL, Excel, ETL pipelines, machine learning, 
-              and business analytics using Power BI, Tableau, and Qlik Sense.
-            </p>
+            <h2 className="text-xl font-semibold mb-5">Tools</h2>
+
+            <div className="grid md:grid-cols-3 gap-6 text-slate-300">
+              <div>
+                <p className="text-white font-medium mb-2">Core</p>
+                <ul className="space-y-1">
+                  <li>• Python</li>
+                  <li>• SQL</li>
+                  <li>• Excel</li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-white font-medium mb-2">Analytics</p>
+                <ul className="space-y-1">
+                  <li>• ETL Pipelines</li>
+                  <li>• Machine Learning</li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-white font-medium mb-2">Visualization</p>
+                <ul className="space-y-1">
+                  <li>• Power BI</li>
+                  <li>• Tableau</li>
+                  <li>• Qlik Sense</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
