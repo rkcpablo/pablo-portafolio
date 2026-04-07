@@ -86,7 +86,8 @@ export default function Home() {
                 <p className="text-white font-medium mb-2">Analytics</p>
                 <ul className="space-y-1">
                   <li>• ETL Pipelines</li>
-                  <li>• Machine Learning</li>
+                  <li>• Statistical Analysis</li>
+                  <li>• Predictive Modeling</li>
                 </ul>
               </div>
 
@@ -102,14 +103,37 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-            <h2 className="text-xl font-semibold mb-3">Certifications</h2>
-            <p className="text-slate-300">
-              Microsoft Certified Azure Fundamentals
-              Microsoft Technology Associate: Database Administration Fundamentals
-              Microsoft Office Specialist: Excel
-            </p>
-          </div>
-        </div>
+  <h2 className="text-xl font-semibold mb-6">Certifications</h2>
+
+  <div className="grid md:grid-cols-3 gap-6 text-center">
+    <div className="p-4 rounded-2xl border border-slate-700">
+      <img
+        src="/mta.png"
+        alt="Database Fundamentals"
+        className="h-28 mx-auto mb-4"
+      />
+      <p className="font-medium">Database Fundamentals</p>
+    </div>
+
+    <div className="p-4 rounded-2xl border border-slate-700">
+      <img
+        src="/azure.png"
+        alt="Azure Fundamentals"
+        className="h-28 mx-auto mb-4"
+      />
+      <p className="font-medium">Azure Fundamentals</p>
+    </div>
+
+    <div className="p-4 rounded-2xl border border-slate-700">
+      <img
+        src="/excel.png"
+        alt="Excel Specialist"
+        className="h-28 mx-auto mb-4"
+      />
+      <p className="font-medium">Excel Specialist</p>
+    </div>
+  </div>
+</div>
 
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Selected Projects</h2>
