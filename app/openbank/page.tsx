@@ -43,7 +43,7 @@ export default function OpenbankPage() {
 
                 <div className="mb-12">
                     <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-                        Openbank Case Study
+                        Openbank 
                     </p>
 
                     <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
@@ -115,24 +115,6 @@ export default function OpenbankPage() {
                         ))}
                     </div>
                 </div>
-
-                <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-                    <h2 className="text-3xl font-bold mb-6">Workflow</h2>
-
-                    <div className="grid md:grid-cols-5 gap-4 text-center">
-                        {["Raw Data", "ETL", "Validation", "Clean Data", "KPIs & Analytics"].map(
-                            (step, index) => (
-                                <div
-                                    key={index}
-                                    className="rounded-2xl border border-slate-700 bg-slate-900/60 p-5"
-                                >
-                                    <p className="font-medium text-slate-200">{step}</p>
-                                </div>
-                            )
-                        )}
-                    </div>
-                </div>
-
                 <div>
                     <h2 className="text-3xl font-bold mb-6">Key Takeaways</h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -146,6 +128,17 @@ export default function OpenbankPage() {
                         ))}
                     </div>
                 </div>
+
+                <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
+                    <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
+
+                    <img
+                        src="/openbank-tech-visual.png"
+                        alt="SQL cloud workflow and analytics architecture"
+                        className="rounded-2xl border border-slate-800 w-full"
+                    />
+                </div>
+
             </section>
         </main>
     );
