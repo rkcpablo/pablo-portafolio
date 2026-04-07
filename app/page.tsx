@@ -1,30 +1,36 @@
+import Link from "next/link";
 export default function Home() {
   const projects = [
     {
+      slug: "openbank",
       title: "Openbank Migration",
       subtitle: "SQL • Data Migration • Banking",
       description:
         "Built and maintained complex SQL queries used daily during migration processes across Argentina, Spain, Germany, and the Netherlands.",
     },
     {
+      slug: "mainrail",
       title: "MainRail Predictive Maintenance",
       subtitle: "Python • Data Cleaning • Predictive Analytics",
       description:
         "Gathered, cleaned, and analyzed railway data to support predictive maintenance models and improve infrastructure reliability.",
     },
     {
+      slug: "amadeus",
       title: "Amadeus Payment Analytics",
       subtitle: "ETL • Payments • KPI Monitoring",
       description:
         "Worked on analytics and ETL pipelines processing millions of daily payment transactions and generating KPI reporting for business monitoring.",
     },
     {
+      slug: "laliga",
       title: "La Liga Match Prediction",
       subtitle: "Machine Learning • Sports Analytics • Python",
       description:
         "Collected and cleaned football data, engineered rollout statistics, and structured a predictive model to estimate match outcomes.",
     },
     {
+      slug: "nba",
       title: "NBA Salary Prediction",
       subtitle: "Data Analysis • Modeling • Sports Data",
       description:
@@ -113,7 +119,7 @@ export default function Home() {
                   alt="Azure Fundamentals"
                   className="h-28 mx-auto mb-4"
                 />
-                <p className="font-medium">Azure Fundamentals</p>
+                <p className="font-medium">Cloud Azure Fundamentals</p>
               </div>
 
               <div className="p-4 rounded-2xl border border-slate-700">
@@ -132,14 +138,13 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition"
-                >
-                  <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
-                  <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
-                  <p className="text-slate-300 leading-7">{project.description}</p>
-                </div>
+                <Link key={index} href={`/${project.slug}`}>
+                  <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer h-full">
+                    <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
+                    <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+                    <p className="text-slate-300 leading-7">{project.description}</p>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
