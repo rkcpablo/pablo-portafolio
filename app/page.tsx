@@ -60,7 +60,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="flex flex-col gap-6 mb-20">
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
             <h2 className="text-xl font-semibold mb-3">About Me</h2>
             <p className="text-slate-300">
