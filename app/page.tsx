@@ -4,14 +4,14 @@ export default function Home() {
     {
       slug: "openbank",
       title: "Openbank Migration",
-      subtitle: "SQL • Data Migration • Banking",
+      subtitle: "SQL • Cloud Data Migration • Bank Industry",
       description:
         "Built and maintained complex SQL queries used daily during migration processes across Argentina, Spain, Germany, and the Netherlands.",
     },
     {
       slug: "mainrail",
       title: "MainRail Predictive Maintenance",
-      subtitle: "Python • Data Cleaning • Predictive Analytics",
+      subtitle: "Python • Predictive Analytics • Transport & Infrastructure Industry",
       description:
         "Gathered, cleaned, and analyzed railway data to support predictive maintenance models and improve infrastructure reliability.",
     },
