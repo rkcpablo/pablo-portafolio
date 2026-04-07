@@ -103,52 +103,53 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-  <h2 className="text-xl font-semibold mb-6">Certifications</h2>
+            <h2 className="text-xl font-semibold mb-6">Certifications</h2>
 
-  <div className="grid md:grid-cols-3 gap-6 text-center">
-    <div className="p-4 rounded-2xl border border-slate-700">
-      <img
-        src="/mta.png"
-        alt="Database Fundamentals"
-        className="h-28 mx-auto mb-4"
-      />
-      <p className="font-medium">Database Fundamentals</p>
-    </div>
-
-    <div className="p-4 rounded-2xl border border-slate-700">
-      <img
-        src="/azure.png"
-        alt="Azure Fundamentals"
-        className="h-28 mx-auto mb-4"
-      />
-      <p className="font-medium">Azure Fundamentals</p>
-    </div>
-
-    <div className="p-4 rounded-2xl border border-slate-700">
-      <img
-        src="/excel.png"
-        alt="Excel Specialist"
-        className="h-28 mx-auto mb-4"
-      />
-      <p className="font-medium">Excel Specialist</p>
-    </div>
-  </div>
-</div>
-
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Selected Projects</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition"
-              >
-                <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
-                <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
-                <p className="text-slate-300 leading-7">{project.description}</p>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="p-4 rounded-2xl border border-slate-700">
+                <img
+                  src="/mta.png"
+                  alt="Database Fundamentals"
+                  className="h-28 mx-auto mb-4"
+                />
+                <p className="font-medium">Database Fundamentals</p>
               </div>
-            ))}
+
+              <div className="p-4 rounded-2xl border border-slate-700">
+                <img
+                  src="/azure.png"
+                  alt="Azure Fundamentals"
+                  className="h-28 mx-auto mb-4"
+                />
+                <p className="font-medium">Azure Fundamentals</p>
+              </div>
+
+              <div className="p-4 rounded-2xl border border-slate-700">
+                <img
+                  src="/excel.png"
+                  alt="Excel Specialist"
+                  className="h-28 mx-auto mb-4"
+                />
+                <p className="font-medium">Excel Specialist</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Selected Projects</h2>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {projects.map((project, index) => (
+                <div
+                  key={index}
+                  className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition"
+                >
+                  <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
+                  <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+                  <p className="text-slate-300 leading-7">{project.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
