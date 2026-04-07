@@ -3,7 +3,7 @@ export default function Home() {
   const projects = [
     {
       slug: "openbank",
-      title: "Openbank Migration",
+      title: "Openbank CloudMigration",
       subtitle: "SQL • Cloud Data Migration • Bank Industry",
       description:
         "Built and maintained complex SQL queries used daily during migration processes across Argentina, Spain, Germany, and the Netherlands.",
@@ -18,7 +18,7 @@ export default function Home() {
     {
       slug: "amadeus",
       title: "Amadeus Payment Analytics",
-      subtitle: "ETL • Payments • KPI Monitoring",
+      subtitle: "ETL Pipeline • Payments / KPI Analysis • Travel Industry",
       description:
         "Worked on analytics and ETL pipelines processing millions of daily payment transactions and generating KPI reporting for business monitoring.",
     },
