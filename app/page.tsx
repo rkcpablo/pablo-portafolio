@@ -45,50 +45,45 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
-            I build data-driven projects across analytics, SQL, machine
+            Everything from analytics (KPIs), SQL, machine
             learning, ETL pipelines, and predictive modeling.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+              href="https://www.linkedin.com/in/pablo-khouri-189427222/"
               target="_blank"
               className="px-6 py-3 rounded-2xl bg-cyan-400 text-black font-semibold hover:scale-105 transition"
             >
               LinkedIn
-            </a>
-            <a
-              href="https://github.com/rkcpablo"
-              target="_blank"
-              className="px-6 py-3 rounded-2xl border border-slate-700 hover:bg-slate-900 transition"
-            >
-              GitHub
             </a>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-20">
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-            <h2 className="text-xl font-semibold mb-3">Focus</h2>
+            <h2 className="text-xl font-semibold mb-3">About Me</h2>
             <p className="text-slate-300">
-              Analytics, SQL, Python, ETL workflows, machine learning, and KPI
-              tracking.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-            <h2 className="text-xl font-semibold mb-3">Style</h2>
-            <p className="text-slate-300">
-              Business-minded data work with technical execution and clear
-              decision-making value.
+              Always a curious and analytical professional, eager to learn, solve problems,
+              and contribute to the development of impactful ideas. I pay close attention 
+              to detail while maintaining focus on the bigger strategic picture.
             </p>
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
             <h2 className="text-xl font-semibold mb-3">Tools</h2>
             <p className="text-slate-300">
-              Python, SQL, Excel, Power BI, Qlik, ETL pipelines, predictive
-              modeling.
+              Python, SQL, Excel, ETL pipelines, machine learning, 
+              and business analytics using Power BI, Tableau, and Qlik Sense.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
+            <h2 className="text-xl font-semibold mb-3">Certifications</h2>
+            <p className="text-slate-300">
+              Microsoft Certified Azure Fundamentals
+              Microsoft Technology Associate: Database Administration Fundamentals
+              Microsoft Office Specialist: Excel
             </p>
           </div>
         </div>
