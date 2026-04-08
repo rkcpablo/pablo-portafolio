@@ -86,6 +86,7 @@ export default function Home() {
                 "ETL Pipelines",
                 "Statistical Analysis",
                 "Predictive Modeling",
+                "Artificial Intelligence",
                 "Power BI",
                 "Tableau",
                 "Qlik Sense",
