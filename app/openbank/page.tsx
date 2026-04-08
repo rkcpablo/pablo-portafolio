@@ -42,47 +42,47 @@ export default function OpenbankPage() {
                 </Link>
 
                 <div className="mb-12">
-  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
-    <div>
-      <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-        Openbank
-      </p>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+                        <div>
+                            <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
+                                Openbank
+                            </p>
 
-      <h1 className="text-4xl md:text-6xl font-bold mb-6">
-        Data Validation & Migration Support
-      </h1>
+                            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                                Data Validation & Migration Support
+                            </h1>
 
-      <p className="text-lg text-slate-300 max-w-3xl mb-6">
-        Supported SQL-based validation and ETL verification processes to help
-        maintain reliable customer and transactional data in a digital banking
-        environment.
-      </p>
-    </div>
+                            <p className="text-lg text-slate-300 max-w-3xl mb-6">
+                                Supported SQL-based validation and ETL verification processes to help
+                                maintain reliable customer and transactional data in a digital banking
+                                environment.
+                            </p>
+                        </div>
 
-    <img
-      src="/openbank-logo.png"
-      alt="Openbank logo"
-      className="h-24 md:h-28 rounded-2xl bg-white p-3 shadow-lg"
-    />
-  </div>
+                        <img
+                            src="/openbank-logo.png"
+                            alt="Openbank logo"
+                            className="h-24 md:h-28 rounded-2xl bg-white p-3 shadow-lg"
+                        />
+                    </div>
 
-  <div className="mb-6">
-    <p className="text-sm text-slate-400 mb-3">
-      Click here to learn more about Openbank
-    </p>
+                    <div className="mb-6">
+                        <p className="text-sm text-slate-400 mb-3">
+                            Click here to learn more about Openbank
+                        </p>
 
-    <a
-      href="https://www.openbank.es/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 hover:scale-105 transition"
-    >
-      <span className="text-cyan-400 text-sm font-medium">
-        Visit Website →
-      </span>
-    </a>
-  </div>
-</div>
+                        <a
+                            href="https://www.openbank.es/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 hover:scale-105 transition"
+                        >
+                            <span className="text-cyan-400 text-sm font-medium">
+                                Visit Website →
+                            </span>
+                        </a>
+                    </div>
+                </div>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
                     <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
@@ -134,11 +134,91 @@ export default function OpenbankPage() {
                 <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
                     <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
 
-                    <img
-                        src="/openbank-tech-visual.png"
-                        alt="SQL cloud workflow and analytics architecture"
-                        className="rounded-2xl border border-slate-800 w-full"
-                    />
+                    <p className="text-slate-400 mb-6 max-w-3xl">
+                        Example of a SQL-based validation workflow used to clean, join, and verify
+                        customer, account, and transaction data.
+                    </p>
+
+                    <div className="rounded-2xl border border-slate-700 bg-slate-950 shadow-lg overflow-hidden">
+                        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-slate-900">
+                            <div className="flex items-center gap-2">
+                                <span className="w-3 h-3 rounded-full bg-red-400"></span>
+                                <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                <span className="w-3 h-3 rounded-full bg-green-400"></span>
+                            </div>
+                            <span className="text-xs text-slate-400 font-mono">
+                                openbank_validation.sql
+                            </span>
+                        </div>
+
+                        <div className="max-h-80 overflow-y-auto overflow-x-auto px-4 py-4">
+                            <pre className="text-sm text-slate-300 font-mono leading-6 whitespace-pre">
+                                {`WITH customers_clean AS (
+    SELECT
+        customer_id,
+        UPPER(TRIM(first_name)) AS first_name,
+        UPPER(TRIM(last_name)) AS last_name,
+        LOWER(TRIM(email)) AS email,
+        REGEXP_REPLACE(phone_number, '[^0-9]', '', 'g') AS clean_phone,
+        status AS customer_status
+    FROM core.customers
+),
+
+accounts_clean AS (
+    SELECT
+        account_id,
+        customer_id,
+        iban,
+        account_type,
+        currency_code,
+        status AS account_status
+    FROM core.accounts
+),
+
+transactions_clean AS (
+    SELECT
+        transaction_id,
+        account_id,
+        transaction_date,
+        amount,
+        currency_code,
+        UPPER(TRIM(transaction_type)) AS transaction_type,
+        REGEXP_REPLACE(UPPER(description), '[^A-Z0-9 ]', '', 'g') AS clean_description,
+        status AS transaction_status
+    FROM core.transactions
+    WHERE transaction_date >= DATE '2024-01-01'
+)
+
+SELECT
+    t.transaction_id,
+    t.transaction_date,
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.email,
+    a.iban,
+    a.account_type,
+    t.transaction_type,
+    t.amount,
+    t.currency_code,
+    t.clean_description,
+    CASE
+        WHEN c.email NOT LIKE '%@%.%' THEN 'INVALID_EMAIL'
+        WHEN LENGTH(c.clean_phone) < 9 THEN 'INVALID_PHONE'
+        WHEN a.account_status <> 'ACTIVE'
+             AND t.transaction_status = 'SETTLED'
+        THEN 'ACCOUNT_STATUS_MISMATCH'
+        ELSE 'OK'
+    END AS validation_result
+FROM transactions_clean t
+INNER JOIN accounts_clean a
+    ON t.account_id = a.account_id
+INNER JOIN customers_clean c
+    ON a.customer_id = c.customer_id
+ORDER BY t.transaction_date DESC;`}
+                            </pre>
+                        </div>
+                    </div>
                 </div>
 
             </section>
