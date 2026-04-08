@@ -42,49 +42,47 @@ export default function OpenbankPage() {
                 </Link>
 
                 <div className="mb-12">
-                    <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-                        Openbank
-                    </p>
+  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+    <div>
+      <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
+        Openbank
+      </p>
 
-                    <p className="text-lg text-slate-300 max-w-3xl mb-6">
-                        Supported SQL-based validation and ETL verification processes to help
-                        maintain reliable customer and transactional data in a digital banking environment.
-                    </p>
+      <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        Data Validation & Migration Support
+      </h1>
 
-                    <div className="mb-6">
-                        <p className="text-sm text-slate-400 mb-3">
-                            Click here to learn more about Openbank
-                        </p>
+      <p className="text-lg text-slate-300 max-w-3xl mb-6">
+        Supported SQL-based validation and ETL verification processes to help
+        maintain reliable customer and transactional data in a digital banking
+        environment.
+      </p>
+    </div>
 
-                        <a
-                            href="https://www.openbank.es/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 hover:scale-105 transition"
-                        >
-                            <img
-                                src="/openbank-logo.png"
-                                alt="Openbank logo"
-                                className="h-14 rounded-xl bg-white p-2"
-                            />
+    <img
+      src="/openbank-logo.png"
+      alt="Openbank logo"
+      className="h-24 md:h-28 rounded-2xl bg-white p-3 shadow-lg"
+    />
+  </div>
 
-                            <span className="text-cyan-400 text-sm font-medium">
-                                Visit Website →
-                            </span>
-                        </a>
-                    </div>
+  <div className="mb-6">
+    <p className="text-sm text-slate-400 mb-3">
+      Click here to learn more about Openbank
+    </p>
 
-                    <div className="flex flex-wrap gap-3">
-                        {tags.map((tag, index) => (
-                            <span
-                                key={index}
-                                className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-sm text-slate-200"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
+    <a
+      href="https://www.openbank.es/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-3 hover:scale-105 transition"
+    >
+      <span className="text-cyan-400 text-sm font-medium">
+        Visit Website →
+      </span>
+    </a>
+  </div>
+</div>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
                     <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
