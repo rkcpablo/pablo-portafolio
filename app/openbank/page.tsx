@@ -43,32 +43,36 @@ export default function OpenbankPage() {
 
                 <div className="mb-12">
                     <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-                        Openbank 
+                        Openbank
                     </p>
-
-                    <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
-                        <h1 className="text-4xl md:text-6xl font-bold">
-                            Data Validation & Migration Support
-                        </h1>
-
-                        <a
-                            href="https://www.openbank.es/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:scale-105 transition"
-                        >
-                            <img
-                                src="/openbank-logo.png"
-                                alt="Openbank logo"
-                                className="h-14 md:h-16 rounded-xl bg-white p-2"
-                            />
-                        </a>
-                    </div>
 
                     <p className="text-lg text-slate-300 max-w-3xl mb-6">
                         Supported SQL-based validation and ETL verification processes to help
                         maintain reliable customer and transactional data in a digital banking environment.
                     </p>
+
+                    <div className="mb-6">
+                        <p className="text-sm text-slate-400 mb-3">
+                            Click here to learn more about Openbank
+                        </p>
+
+                        <a
+                            href="https://www.openbank.es/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 hover:scale-105 transition"
+                        >
+                            <img
+                                src="/openbank-logo.png"
+                                alt="Openbank logo"
+                                className="h-14 rounded-xl bg-white p-2"
+                            />
+
+                            <span className="text-cyan-400 text-sm font-medium">
+                                Visit Website →
+                            </span>
+                        </a>
+                    </div>
 
                     <div className="flex flex-wrap gap-3">
                         {tags.map((tag, index) => (
