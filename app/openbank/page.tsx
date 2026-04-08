@@ -134,25 +134,25 @@ export default function OpenbankPage() {
                 <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
                     <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
 
-                    <p className="text-slate-400 mb-6 max-w-3xl">
-                        Example of a SQL-based validation workflow used to clean, join, and verify
-                        customer, account, and transaction data.
+                    <p className="text-xs text-slate-400 italic mb-4">
+                        The query, concepts, and information displayed below are purely illustrative
+                        and DO NOT represent any actual company data.
                     </p>
 
-                    <div className="rounded-2xl border border-slate-700 bg-slate-950 shadow-lg overflow-hidden">
-                        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-slate-900">
+                    <div className="rounded-2xl border border-slate-300 bg-white shadow-xl overflow-hidden">
+                        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 bg-slate-100">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-3 rounded-full bg-red-400"></span>
                                 <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                                 <span className="w-3 h-3 rounded-full bg-green-400"></span>
                             </div>
-                            <span className="text-xs text-slate-400 font-mono">
+                            <span className="text-xs text-slate-500 font-mono">
                                 openbank_validation.sql
                             </span>
                         </div>
 
-                        <div className="max-h-80 overflow-y-auto overflow-x-auto px-4 py-4">
-                            <pre className="text-sm text-slate-300 font-mono leading-6 whitespace-pre">
+                        <div className="max-h-80 overflow-y-auto overflow-x-auto px-4 py-4 bg-white">
+                            <pre className="text-sm font-mono leading-6 whitespace-pre text-emerald-700">
                                 {`WITH customers_clean AS (
     SELECT
         customer_id,
