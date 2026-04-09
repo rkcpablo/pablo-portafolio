@@ -107,7 +107,7 @@ export default function AmadeusPage() {
 
           <section className="relative py-24 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
-              
+
               <div className="grid lg:grid-cols-2 gap-8 items-start">
                 {/* Left Side - Pipeline Flow */}
                 <div className="rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-8 shadow-2xl">
@@ -211,10 +211,6 @@ export default function AmadeusPage() {
               </div>
             </div>
           </section>
-
-          <div className="rounded-2xl border border-dashed border-slate-700 p-6 text-slate-400">
-            Add Amadeus visual here
-          </div>
         </div>
 
         <div>
