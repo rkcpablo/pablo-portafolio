@@ -107,20 +107,7 @@ export default function AmadeusPage() {
 
           <section className="relative py-24 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
-              <div className="mb-12">
-                <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-                  Amadeus
-                </p>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Payments Data Control Room
-                </h2>
-                <p className="text-slate-300 max-w-3xl text-lg">
-                  A technical overview of how payment data moved from raw transaction inputs
-                  through ETL transformation, validation layers, and warehouse delivery into
-                  business-ready reporting.
-                </p>
-              </div>
-
+              
               <div className="grid lg:grid-cols-2 gap-8 items-start">
                 {/* Left Side - Pipeline Flow */}
                 <div className="rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-8 shadow-2xl">
