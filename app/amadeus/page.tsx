@@ -105,6 +105,126 @@ export default function AmadeusPage() {
         <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
           <h2 className="text-3xl font-bold mb-6">Technical Overview</h2>
 
+          <section className="relative py-24 px-6 md:px-12">
+            <div className="max-w-7xl mx-auto">
+              <div className="mb-12">
+                <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
+                  Amadeus
+                </p>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                  Payments Data Control Room
+                </h2>
+                <p className="text-slate-300 max-w-3xl text-lg">
+                  A technical overview of how payment data moved from raw transaction inputs
+                  through ETL transformation, validation layers, and warehouse delivery into
+                  business-ready reporting.
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-8 items-start">
+                {/* Left Side - Pipeline Flow */}
+                <div className="rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-8 shadow-2xl">
+                  <div className="flex items-center justify-between mb-8">
+                    <h3 className="text-xl font-semibold text-white">Pipeline Flow</h3>
+                    <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium">
+                      <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+                      </span>
+                      System Healthy
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      "Raw Payments",
+                      "ETL Transform",
+                      "Validation Checks",
+                      "Warehouse Load",
+                      "BI Output",
+                    ].map((step, index) => (
+                      <div key={index} className="flex flex-col items-center">
+                        <div className="w-full rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-6 py-5 text-center shadow-lg shadow-cyan-500/10 transition hover:-translate-y-1 hover:border-cyan-400/50">
+                          <p className="text-white font-semibold tracking-wide">{step}</p>
+                        </div>
+                        {index < 4 && (
+                          <div className="h-8 w-px bg-gradient-to-b from-cyan-400 to-slate-700"></div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Side - Monitoring Console */}
+                <div className="rounded-3xl border border-slate-800 bg-slate-950/80 backdrop-blur-sm p-8 shadow-2xl">
+                  <h3 className="text-xl font-semibold text-white mb-8">Monitoring Console</h3>
+
+                  <div className="space-y-6">
+                    <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6">
+                      <p className="text-xs uppercase tracking-[0.2em] text-cyan-400 mb-4">
+                        Ingestion Status
+                      </p>
+                      <div className="space-y-3 text-slate-300 text-sm">
+                        <div className="flex justify-between">
+                          <span>Transactions loaded</span>
+                          <span className="text-white font-medium">2.4M rows</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Payment providers</span>
+                          <span className="text-white font-medium">14 sources</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Execution mode</span>
+                          <span className="text-white font-medium">Daily batch</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6">
+                      <p className="text-xs uppercase tracking-[0.2em] text-cyan-400 mb-4">
+                        Validation Checks
+                      </p>
+                      <div className="space-y-3 text-sm text-slate-300">
+                        <div className="flex justify-between">
+                          <span>Duplicate control</span>
+                          <span className="text-emerald-400 font-medium">Passed</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Row reconciliation</span>
+                          <span className="text-emerald-400 font-medium">Matched</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Null threshold</span>
+                          <span className="text-emerald-400 font-medium">&lt; 0.5%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6">
+                      <p className="text-xs uppercase tracking-[0.2em] text-cyan-400 mb-4">
+                        Business Output
+                      </p>
+                      <div className="grid grid-cols-3 gap-4">
+                        <div className="rounded-xl bg-slate-800/80 p-4 text-center">
+                          <p className="text-xs text-slate-400 mb-2">Approval Rate</p>
+                          <p className="text-white font-bold text-xl">92.3%</p>
+                        </div>
+                        <div className="rounded-xl bg-slate-800/80 p-4 text-center">
+                          <p className="text-xs text-slate-400 mb-2">Decline Rate</p>
+                          <p className="text-white font-bold text-xl">5.1%</p>
+                        </div>
+                        <div className="rounded-xl bg-slate-800/80 p-4 text-center">
+                          <p className="text-xs text-slate-400 mb-2">Chargebacks</p>
+                          <p className="text-white font-bold text-xl">1.2%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <div className="rounded-2xl border border-dashed border-slate-700 p-6 text-slate-400">
             Add Amadeus visual here
           </div>
