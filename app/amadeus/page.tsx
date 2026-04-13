@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function AmadeusPage() {
   const responsibilities = [
@@ -28,6 +29,44 @@ export default function AmadeusPage() {
     "Better understanding of ETL and KPI reporting workflows",
     "Experience working with large-scale operational analytics",
   ];
+
+  const logLines = [
+    "Initializing ETL process...",
+    "Source connection established.",
+    "Records retrieved: 1,000,000",
+    "Validating against yesterday's records...",
+    "Reconciliation completed successfully.",
+    "Checking null thresholds...",
+    "99.05% of records passed validation.",
+    "Transforming KPI-ready output...",
+    "Exporting to reporting layer...",
+    "Job status: SUCCESS",
+  ];
+
+  const [startLog, setStartLog] = useState(false);
+  const [visibleLines, setVisibleLines] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!startLog) return;
+
+    setVisibleLines([]);
+    let currentIndex = 0;
+
+    const interval = setInterval(() => {
+      setVisibleLines((prev) => {
+        if (currentIndex >= logLines.length) {
+          clearInterval(interval);
+          return prev;
+        }
+
+        const next = [...prev, logLines[currentIndex]];
+        currentIndex += 1;
+        return next;
+      });
+    }, 650);
+
+    return () => clearInterval(interval);
+  }, [startLog]);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-black text-white">
@@ -118,39 +157,59 @@ export default function AmadeusPage() {
           </div>
         </div>
 
+        <div>
+          <h2 className="text-3xl font-bold mb-6">Key Takeaways</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {takeaways.map((takeaway, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6 text-slate-300"
+              >
+                {takeaway}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
           <h2 className="text-3xl font-bold mb-6">Technical Overview</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-6 shadow-2xl">
-              <div className="flex items-center justify-between mb-8">
-                <h3 className="text-xl font-semibold text-white">Pipeline Flow</h3>
+            <div className="rounded-3xl border border-slate-800 bg-slate-950/90 backdrop-blur-sm p-6 shadow-2xl">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-semibold text-white">ETL Execution Log</h3>
                 <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
                   </span>
-                  System Healthy
+                  {startLog ? "Running Script" : "Script Ready"}
                 </div>
               </div>
 
-              <div className="space-y-4">
-                {[
-                  "Raw Payments",
-                  "ETL Transform",
-                  "Validation Checks",
-                  "Warehouse Load",
-                  "BI Output",
-                ].map((step, index) => (
-                  <div key={index} className="flex flex-col items-center">
-                    <div className="w-full rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-6 py-5 text-center shadow-lg shadow-cyan-500/10 transition hover:-translate-y-1 hover:border-cyan-400/50">
-                      <p className="text-white font-semibold tracking-wide">{step}</p>
-                    </div>
-                    {index < 4 && (
-                      <div className="h-8 w-px bg-gradient-to-b from-cyan-400 to-slate-700"></div>
+              <div className="rounded-2xl border border-slate-800 bg-black p-5 font-mono text-sm leading-7 text-slate-300 min-h-[420px]">
+                {!startLog ? (
+                  <button
+                    onClick={() => setStartLog(true)}
+                    className="text-cyan-400 hover:text-cyan-300 transition"
+                  >
+                    Click here to continue...
+                  </button>
+                ) : (
+                  <div className="space-y-2">
+                    {visibleLines.map((line, index) => (
+                      <p key={index}>
+                        <span className="text-emerald-400">&gt;</span> {line}
+                      </p>
+                    ))}
+
+                    {visibleLines.length < logLines.length ? (
+                      <p className="text-cyan-400 animate-pulse">Running...</p>
+                    ) : (
+                      <p className="text-cyan-400 animate-pulse">_</p>
                     )}
                   </div>
-                ))}
+                )}
               </div>
             </div>
 
@@ -221,20 +280,6 @@ export default function AmadeusPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Key Takeaways</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {takeaways.map((takeaway, index) => (
-              <div
-                key={index}
-                className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6 text-slate-300"
-              >
-                {takeaway}
-              </div>
-            ))}
           </div>
         </div>
       </section>
