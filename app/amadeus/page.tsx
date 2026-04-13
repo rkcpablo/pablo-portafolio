@@ -157,7 +157,7 @@ export default function AmadeusPage() {
           </div>
         </div>
 
-        <div>
+        <div className="mb-10">
           <h2 className="text-3xl font-bold mb-6">Key Takeaways</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {takeaways.map((takeaway, index) => (
@@ -177,7 +177,7 @@ export default function AmadeusPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-3xl border border-slate-800 bg-slate-950/90 backdrop-blur-sm p-6 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-white">ETL Execution Log</h3>
+                <h3 className="text-xl font-semibold text-white">TEST LOG</h3>
                 <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
