@@ -112,17 +112,18 @@ export default function AmadeusPage() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="hidden md:flex shrink-0">
-          <div className="h-28 w-28 md:h-36 md:w-36 rounded-[1.8rem] overflow-hidden flex items-center justify-center">
-            <img
-              src="/amadeus.jpg"
-              alt="Amadeus logo"
-              className="h-full w-full object-cover"
-            />
+
+          <div className="hidden md:flex shrink-0">
+            <div className="h-28 w-28 md:h-36 md:w-36 rounded-[1.8rem] overflow-hidden flex items-center justify-center">
+              <img
+                src="/amadeus.jpg"
+                alt="Amadeus logo"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
-
+        
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
             <h2 className="text-2xl font-semibold mb-4">What I Did</h2>
@@ -188,7 +189,7 @@ export default function AmadeusPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-800 bg-black p-5 font-mono text-sm leading-7 text-slate-300 min-h-[280px]">
+              <div className="rounded-2xl border border-slate-800 bg-black p-5 font-mono text-sm leading-7 text-slate-300 min-h-[640px]">
                 {!startLog ? (
                   <button
                     onClick={() => setStartLog(true)}
