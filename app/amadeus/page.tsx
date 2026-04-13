@@ -75,7 +75,7 @@ export default function AmadeusPage() {
           <div className="hidden md:flex shrink-0">
             <div className="h-32 w-32 md:h-40 md:w-40 rounded-[2rem] bg-white flex items-center justify-center p-6">
               <img
-                src="/amadeus-logo.png"
+                src="/amadeus.jpg"
                 alt="Amadeus logo"
                 className="max-h-full max-w-full object-contain"
               />
