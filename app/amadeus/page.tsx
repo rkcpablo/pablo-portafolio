@@ -112,15 +112,14 @@ export default function AmadeusPage() {
               </a>
             </div>
           </div>
-
-          <div className="hidden md:flex shrink-0">
-            <div className="h-32 w-32 md:h-40 md:w-40 rounded-[2rem] bg-white flex items-center justify-center p-6">
-              <img
-                src="/amadeus.jpg"
-                alt="Amadeus logo"
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>
+        </div>
+        <div className="hidden md:flex shrink-0">
+          <div className="h-28 w-28 md:h-36 md:w-36 rounded-[1.8rem] overflow-hidden flex items-center justify-center">
+            <img
+              src="/amadeus.jpg"
+              alt="Amadeus logo"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
 
@@ -179,7 +178,7 @@ export default function AmadeusPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-3xl border border-slate-800 bg-slate-950/90 backdrop-blur-sm p-6 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-white">TEST LOG</h3>
+                <h3 className="text-xl font-semibold text-white">ETL EXECUTION LOG</h3>
                 <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -189,7 +188,7 @@ export default function AmadeusPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-800 bg-black p-5 font-mono text-sm leading-7 text-slate-300 min-h-[420px]">
+              <div className="rounded-2xl border border-slate-800 bg-black p-5 font-mono text-sm leading-7 text-slate-300 min-h-[280px]">
                 {!startLog ? (
                   <button
                     onClick={() => setStartLog(true)}
