@@ -1,6 +1,7 @@
 import Link from "next/link";
+
 export default function Home() {
-  const projects = [
+  const professionalProjects = [
     {
       slug: "openbank",
       title: "Openbank CloudMigration",
@@ -9,19 +10,23 @@ export default function Home() {
         "Built and maintained complex SQL queries used daily during migration processes across Argentina, Spain, Germany, and the Netherlands.",
     },
     {
-      slug: "mainrail",
-      title: "MainRail Predictive Maintenance",
-      subtitle: "Python • Predictive Analytics • Transport & Infrastructure Industry",
-      description:
-        "Gathered, cleaned, and analyzed railway data to support predictive maintenance models and improve infrastructure reliability.",
-    },
-    {
       slug: "amadeus",
       title: "Amadeus Payment Analytics",
       subtitle: "ETL Pipeline • Payments / KPI Analysis • Travel Industry",
       description:
         "Worked on analytics and ETL pipelines processing millions of daily payment transactions and generating KPI reporting for business monitoring.",
     },
+    {
+      slug: "mainrail",
+      title: "MainRail Predictive Maintenance",
+      subtitle:
+        "Python • Predictive Analytics • Transport & Infrastructure Industry",
+      description:
+        "Gathered, cleaned, and analyzed railway data to support predictive maintenance models and improve infrastructure reliability.",
+    },
+  ];
+
+  const personalProjects = [
     {
       slug: "laliga",
       title: "La Liga Match Prediction",
@@ -51,13 +56,15 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
-            Welcome to my portfolio! Take a look at my experiences and if you have any questions please reach out
+            Welcome to my portfolio! Take a look at my experiences and if you
+            have any questions please reach out
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a
               href="https://www.linkedin.com/in/pablo-khouri-189427222/"
               target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 rounded-2xl bg-cyan-400 text-black font-semibold hover:scale-105 transition"
             >
               LinkedIn
@@ -69,9 +76,10 @@ export default function Home() {
           <div className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
             <h2 className="text-xl font-semibold mb-3">About Me</h2>
             <p className="text-slate-300">
-              Always a curious and analytical professional, eager to learn, solve problems,
-              and contribute to the development of impactful ideas. I pay close attention
-              to detail while maintaining focus on the bigger strategic picture.
+              Always a curious and analytical professional, eager to learn, solve
+              problems, and contribute to the development of impactful ideas. I
+              pay close attention to detail while maintaining focus on the bigger
+              strategic picture.
             </p>
           </div>
 
@@ -135,18 +143,56 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Selected Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Selected Work</h2>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {projects.map((project, index) => (
-                <Link key={index} href={`/${project.slug}`}>
-                  <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer h-full">
-                    <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
-                    <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
-                    <p className="text-slate-300 leading-7">{project.description}</p>
-                  </div>
-                </Link>
-              ))}
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
+                  Professional Experience
+                </h3>
+
+                <div className="space-y-6">
+                  {professionalProjects.map((project, index) => (
+                    <Link key={index} href={`/${project.slug}`}>
+                      <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
+                        <p className="text-sm text-cyan-400 mb-3">
+                          {project.subtitle}
+                        </p>
+                        <h3 className="text-2xl font-semibold mb-4">
+                          {project.title}
+                        </h3>
+                        <p className="text-slate-300 leading-7">
+                          {project.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
+                  Personal Projects
+                </h3>
+
+                <div className="space-y-6">
+                  {personalProjects.map((project, index) => (
+                    <Link key={index} href={`/${project.slug}`}>
+                      <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
+                        <p className="text-sm text-cyan-400 mb-3">
+                          {project.subtitle}
+                        </p>
+                        <h3 className="text-2xl font-semibold mb-4">
+                          {project.title}
+                        </h3>
+                        <p className="text-slate-300 leading-7">
+                          {project.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
