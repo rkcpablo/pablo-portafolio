@@ -14,7 +14,7 @@ export default function Home() {
       title: "Amadeus Payment Analytics",
       subtitle: "ETL Pipeline • Payments / KPI Analysis • Travel Industry",
       description:
-        "Worked on analytics and ETL pipelines processing millions of daily payment transactions and generating KPI reporting for business monitoring.",
+        "Worked on ETL pipelines processing millions of daily payment transactions and generating KPI reporting for business monitoring.",
     },
     {
       slug: "mainrail",
@@ -148,7 +148,7 @@ export default function Home() {
                 Professional Experience
               </h2>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {professionalProjects.map((project, index) => (
                   <Link key={index} href={`/${project.slug}`}>
                     <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
@@ -166,7 +166,7 @@ export default function Home() {
                 Personal Work
               </h2>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {personalProjects.map((project, index) => (
                   <Link key={index} href={`/${project.slug}`}>
                     <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
