@@ -46,29 +46,41 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-black text-white">
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-        <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-            Pablo Khouri
-          </p>
+        <div className="mb-20 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
+              Pablo Khouri
+            </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
-            Data projects with business impact and analytical depth.
-          </h1>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-4xl mb-6">
+              Data projects with business impact and analytical depth.
+            </h1>
 
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
-            Welcome to my portfolio! Take a look at my experiences and if you
-            have any questions please reach out
-          </p>
+            <p className="text-lg md:text-xl text-slate-300 max-w-3xl mb-8">
+              Welcome to my portfolio! Take a look at my experiences and if you have any
+              questions please reach out
+            </p>
 
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="https://www.linkedin.com/in/pablo-khouri-189427222/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-2xl bg-cyan-400 text-black font-semibold hover:scale-105 transition"
-            >
-              LinkedIn
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://www.linkedin.com/in/pablo-khouri-189427222/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-2xl bg-cyan-400 text-black font-semibold hover:scale-105 transition"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-2xl bg-slate-900">
+              <img
+                src="/profile.jpg"
+                alt="Pablo Khouri"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
@@ -144,7 +156,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-xl font-semibold mb-3"> 
+              <h2 className="text-xl font-semibold mb-3">
                 Professional Experience
               </h2>
 
