@@ -76,7 +76,7 @@ export default function Home() {
           <div className="flex justify-center lg:justify-end">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-2xl bg-slate-900">
               <img
-                src="/profile.jpg"
+                src="/profile.jpeg"
                 alt="Pablo Khouri"
                 className="w-full h-full object-cover"
               />
