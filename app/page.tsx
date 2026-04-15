@@ -170,29 +170,44 @@ export default function Home() {
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
-                  Personal Projects
-                </h3>
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                    Professional Experience
+                  </h2>
 
-                <div className="space-y-6">
-                  {personalProjects.map((project, index) => (
-                    <Link key={index} href={`/${project.slug}`}>
-                      <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
-                        <p className="text-sm text-cyan-400 mb-3">
-                          {project.subtitle}
-                        </p>
-                        <h3 className="text-2xl font-semibold mb-4">
-                          {project.title}
-                        </h3>
-                        <p className="text-slate-300 leading-7">
-                          {project.description}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
+                  <div className="space-y-8">
+                    {professionalProjects.map((project, index) => (
+                      <Link key={index} href={`/${project.slug}`}>
+                        <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
+                          <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
+                          <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+                          <p className="text-slate-300 leading-7">{project.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                    Personal Work
+                  </h2>
+
+                  <div className="space-y-8">
+                    {personalProjects.map((project, index) => (
+                      <Link key={index} href={`/${project.slug}`}>
+                        <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
+                          <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
+                          <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+                          <p className="text-slate-300 leading-7">{project.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
