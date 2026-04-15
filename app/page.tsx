@@ -148,7 +148,7 @@ export default function Home() {
                 Professional Experience
               </h2>
 
-              <div className="space-y-20">
+              <div className="space-y-8">
                 {professionalProjects.map((project, index) => (
                   <Link key={index} href={`/${project.slug}`} className="block">
                     <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
@@ -166,7 +166,7 @@ export default function Home() {
                 Personal Work
               </h2>
 
-              <div className="space-y-20">
+              <div className="space-y-8">
                 {personalProjects.map((project, index) => (
                   <Link key={index} href={`/${project.slug}`} className="block">
                     <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
