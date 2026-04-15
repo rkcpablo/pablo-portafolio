@@ -150,7 +150,7 @@ export default function Home() {
 
               <div className="space-y-20">
                 {professionalProjects.map((project, index) => (
-                  <Link key={index} href={`/${project.slug}`}>
+                  <Link key={index} href={`/${project.slug}`} className="block">
                     <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
                       <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
                       <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
@@ -168,7 +168,7 @@ export default function Home() {
 
               <div className="space-y-20">
                 {personalProjects.map((project, index) => (
-                  <Link key={index} href={`/${project.slug}`}>
+                  <Link key={index} href={`/${project.slug}`} className="block">
                     <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 hover:-translate-y-1 hover:border-cyan-400/40 transition cursor-pointer">
                       <p className="text-sm text-cyan-400 mb-3">{project.subtitle}</p>
                       <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
