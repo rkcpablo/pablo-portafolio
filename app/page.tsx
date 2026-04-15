@@ -144,7 +144,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="text-xl font-semibold mb-3"> 
                 Professional Experience
               </h2>
 
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="text-xl font-semibold mb-3">
                 Personal Work
               </h2>
 
