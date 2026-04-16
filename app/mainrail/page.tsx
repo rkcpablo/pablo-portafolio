@@ -109,11 +109,79 @@ export default function MainrailPage() {
           </div>
         </div>
 
-        <div className="mb-10 rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6">
-          <h2 className="text-3xl font-bold mb-6">Technical Overview</h2>
+        <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
+          <div className="mb-6">
+            <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-3">
+              Technical Overview
+            </p>
+            <h2 className="text-3xl font-bold mb-4">Predictive Maintenance Snapshot</h2>
+            <p className="text-slate-300 max-w-3xl">
+              Example of how engineered rail features can be evaluated by a machine
+              learning model to detect high-risk conditions associated with rail
+              buckling before failure occurs.
+            </p>
+          </div>
 
-          <div className="rounded-2xl border border-dashed border-slate-700 p-6 text-slate-400">
-            Add MainRail visual here
+          <div className="rounded-2xl border border-slate-800 bg-black/40 overflow-x-auto">
+            <table className="w-full min-w-[900px] text-sm text-left text-slate-300">
+              <thead className="bg-white/5 text-slate-400 uppercase tracking-[0.18em] text-xs">
+                <tr>
+                  <th className="px-4 py-4">rail_id</th>
+                  <th className="px-4 py-4">curvature</th>
+                  <th className="px-4 py-4">material</th>
+                  <th className="px-4 py-4">km</th>
+                  <th className="px-4 py-4">temperature</th>
+                  <th className="px-4 py-4">elevation</th>
+                  <th className="px-4 py-4">days_since_last_failure</th>
+                  <th className="px-4 py-4">stress</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr className="border-t border-slate-800">
+                  <td className="px-4 py-4 font-medium text-white">rail_id_01</td>
+                  <td className="px-4 py-4 bg-orange-500/20 text-orange-200">8.7°</td>
+                  <td className="px-4 py-4 bg-yellow-500/20 text-yellow-200">Steel-A</td>
+                  <td className="px-4 py-4 bg-red-500/25 text-red-200 font-semibold">124.8</td>
+                  <td className="px-4 py-4 bg-red-500/30 text-red-200 font-semibold">46.2°C</td>
+                  <td className="px-4 py-4 bg-orange-500/20 text-orange-200">1,420 m</td>
+                  <td className="px-4 py-4 bg-red-500/30 text-red-200 font-semibold">187</td>
+                  <td className="px-4 py-4 bg-red-500/35 text-red-100 font-bold">92.4</td>
+                </tr>
+
+                <tr className="border-t border-slate-800">
+                  <td className="px-4 py-4 font-medium text-white">rail_id_02</td>
+                  <td className="px-4 py-4 bg-yellow-500/15 text-yellow-200">5.1°</td>
+                  <td className="px-4 py-4">Steel-B</td>
+                  <td className="px-4 py-4">98.3</td>
+                  <td className="px-4 py-4 bg-yellow-500/15 text-yellow-200">34.8°C</td>
+                  <td className="px-4 py-4">1,050 m</td>
+                  <td className="px-4 py-4 bg-orange-500/15 text-orange-200">96</td>
+                  <td className="px-4 py-4 bg-yellow-500/15 text-yellow-200">61.7</td>
+                </tr>
+
+                <tr className="border-t border-slate-800">
+                  <td className="px-4 py-4 font-medium text-white">rail_id_03</td>
+                  <td className="px-4 py-4">3.4°</td>
+                  <td className="px-4 py-4">Composite-X</td>
+                  <td className="px-4 py-4">76.9</td>
+                  <td className="px-4 py-4">27.1°C</td>
+                  <td className="px-4 py-4">860 m</td>
+                  <td className="px-4 py-4">41</td>
+                  <td className="px-4 py-4 bg-green-500/10 text-green-200">28.9</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-cyan-500/20 bg-cyan-500/10 px-5 py-4">
+            <p className="font-mono text-sm md:text-base text-cyan-200">
+              {'>'} Random Forest predicts with{" "}
+              <span className="font-bold text-white">88%</span> confidence that{" "}
+              <span className="font-bold text-white">rail_id_01</span> is likely to
+              experience <span className="font-bold text-white">rail buckling</span> in
+              the near future.
+            </p>
           </div>
         </div>
 
