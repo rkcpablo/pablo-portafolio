@@ -111,14 +111,8 @@ export default function MainrailPage() {
 
         <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
           <div className="mb-6">
-            <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-3">
+            <p className="text-3xl font-bold mb-6">
               Technical Overview
-            </p>
-            <h2 className="text-3xl font-bold mb-4">Predictive Maintenance Snapshot</h2>
-            <p className="text-slate-300 max-w-3xl">
-              Example of how engineered rail features can be evaluated by a machine
-              learning model to detect high-risk conditions associated with rail
-              buckling before failure occurs.
             </p>
           </div>
 
