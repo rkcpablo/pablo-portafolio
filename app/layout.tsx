@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pablo Khouri | Data & Business Analytics",
-  description: "Portfolio of Pablo Khouri – Data Analyst",
+  title: "Pablo Khouri",
+  description: "%s | Pablo Khouri",
 };
 
 export default function RootLayout({
