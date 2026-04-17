@@ -123,6 +123,20 @@ export default function MainrailPage() {
           </div>
         </div>
 
+        <div>
+          <h2 className="text-3xl font-bold mb-6">Key Takeaways</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {takeaways.map((takeaway, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6 text-slate-300"
+              >
+                {takeaway}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
           <div className="mb-6">
             <p className="text-3xl font-bold mb-6">
@@ -192,20 +206,7 @@ export default function MainrailPage() {
             </p>
           </div>
         </div>
-
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Key Takeaways</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {takeaways.map((takeaway, index) => (
-              <div
-                key={index}
-                className="rounded-3xl border border-slate-800 bg-white/5 backdrop-blur-sm p-6 text-slate-300"
-              >
-                {takeaway}
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </section>
     </main>
   );
