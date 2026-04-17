@@ -49,7 +49,7 @@ export default function MainrailPage() {
 
         <div className="mb-12">
           <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-            MainRail 
+            MainRail
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -61,16 +61,30 @@ export default function MainrailPage() {
             maintenance planning in a railway infrastructure context.
           </p>
 
-          <div className="flex flex-wrap gap-3">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-sm text-slate-200"
-              >
-                {tag}
+          <div>
+            <p className="text-sm text-slate-400 mb-3">
+              Click here to learn more about Mainrail
+            </p>
+
+            <a
+              href="https://mainrail.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 hover:scale-105 transition"
+            >
+              <span className="text-cyan-400 text-sm font-medium">
+                Visit Website →
               </span>
-            ))}
+            </a>
           </div>
+        </div>
+
+        <div className="shrink-0">
+          <img
+            src="/mainrail-logo.png"
+            alt="Mainrail logo"
+            className="h-20 w-auto rounded-2xl bg-white p-3 shadow-lg"
+          />
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-10">
