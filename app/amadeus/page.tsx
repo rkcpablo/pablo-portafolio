@@ -83,7 +83,7 @@ export default function AmadeusPage() {
         <div className="mb-12 flex items-start justify-between gap-10">
           <div className="flex-1 max-w-5xl">
             <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-              Amadeus Case Study
+              Amadeus
             </p>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">

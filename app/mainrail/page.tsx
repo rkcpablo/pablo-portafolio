@@ -49,7 +49,7 @@ export default function MainrailPage() {
 
         <div className="mb-12">
           <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-            MainRail Case Study
+            MainRail 
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
