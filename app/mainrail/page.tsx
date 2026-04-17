@@ -145,7 +145,7 @@ export default function MainrailPage() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
+        <div className="mt-12 rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
           <div className="mb-6">
             <p className="text-3xl font-bold mb-6">
               Technical Overview
