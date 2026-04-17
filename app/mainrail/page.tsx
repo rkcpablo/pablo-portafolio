@@ -47,45 +47,52 @@ export default function MainrailPage() {
           ← Back to Portfolio
         </Link>
 
-        <div className="mb-12">
-          <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
-            MainRail
-          </p>
-
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Rail Maintenance Prediction with Python
-          </h1>
-
-          <p className="text-lg text-slate-300 max-w-3xl mb-6">
-            Worked on data gathering, cleaning, and predictive analysis to support
-            maintenance planning in a railway infrastructure context.
-          </p>
-
-          <div>
-            <p className="text-sm text-slate-400 mb-3">
-              Click here to learn more about Mainrail
+        {/* CHANGE 1:
+            Put title/content + image inside the SAME flex container
+            so the image sits on the right instead of dropping below */}
+        <div className="mb-12 flex items-start justify-between gap-10">
+          <div className="flex-1 max-w-5xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-cyan-400 mb-4">
+              MainRail
             </p>
 
-            <a
-              href="https://elreferente.es/inversiones/mainrail-obtiene-854000-nueva-ronda-de-financiacion/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 hover:scale-105 transition"
-            >
-              <span className="text-cyan-400 text-sm font-medium">
-                Visit Website →
-              </span>
-            </a>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Rail Maintenance Prediction with Python
+            </h1>
+
+            <p className="text-lg text-slate-300 max-w-3xl mb-6">
+              Worked on data gathering, cleaning, and predictive analysis to support
+              maintenance planning in a railway infrastructure context.
+            </p>
+
+            <div>
+              <p className="text-sm text-slate-400 mb-3">
+                Click here to learn more about Mainrail
+              </p>
+
+              <a
+                href="https://elreferente.es/inversiones/mainrail-obtiene-854000-nueva-ronda-de-financiacion/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 hover:scale-105 transition"
+              >
+                <span className="text-cyan-400 text-sm font-medium">
+                  Visit Website →
+                </span>
+              </a>
+            </div>
           </div>
 
+          {/* CHANGE 2:
+              Make image square and keep it from stretching.
+              h-24 w-24 + object-contain fixes the long rectangle look */}
           <div className="shrink-0">
             <img
               src="/mainrail-logo.jpg"
               alt="Mainrail logo"
-              className="h-20 w-auto rounded-2xl bg-white p-3 shadow-lg"
+              className="h-24 w-24 object-contain rounded-2xl bg-white p-3 shadow-lg"
             />
           </div>
-
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -138,8 +145,8 @@ export default function MainrailPage() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
-          <div className="mt-16">
+        <div className="mt-16 rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
+          <div className="mb-6">
             <p className="text-3xl font-bold mb-6">
               Technical Overview
             </p>
