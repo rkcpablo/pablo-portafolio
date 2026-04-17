@@ -67,7 +67,7 @@ export default function MainrailPage() {
             </p>
 
             <a
-              href="https://mainrail.com/"
+              href="https://elreferente.es/inversiones/mainrail-obtiene-854000-nueva-ronda-de-financiacion/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 hover:scale-105 transition"
@@ -77,14 +77,15 @@ export default function MainrailPage() {
               </span>
             </a>
           </div>
-        </div>
 
-        <div className="shrink-0">
-          <img
-            src="/mainrail-logo.png"
-            alt="Mainrail logo"
-            className="h-20 w-auto rounded-2xl bg-white p-3 shadow-lg"
-          />
+          <div className="shrink-0">
+            <img
+              src="/mainrail-logo.jpg"
+              alt="Mainrail logo"
+              className="h-20 w-auto rounded-2xl bg-white p-3 shadow-lg"
+            />
+          </div>
+
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -138,7 +139,7 @@ export default function MainrailPage() {
         </div>
 
         <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-6 md:p-8 overflow-hidden">
-          <div className="mb-6">
+          <div className="mt-16">
             <p className="text-3xl font-bold mb-6">
               Technical Overview
             </p>
@@ -206,7 +207,7 @@ export default function MainrailPage() {
             </p>
           </div>
         </div>
-        
+
       </section>
     </main>
   );
